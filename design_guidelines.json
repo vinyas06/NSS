@@ -1,0 +1,181 @@
+{
+  "theme": {
+    "default_mode": "light",
+    "support_dark_mode": true,
+    "strategy": "Dual emotional design: Public & Student portal uses an authentic Indian institutional civic pride palette (Deep Navy Blue #0F172A, NSS Rath Wheel Crimson Red #DC2626 / #B91C1C, Warm Sand/Parchment #F8FAFC and #FFFDF7, Crisp White, and Gold accents #D97706) honoring the NSS motto 'NOT ME BUT YOU'. Admin & Super Admin portal uses a high-clarity command center (Slate-900 sidebar, dense 1px zinc/slate borders, clear tabular layout, zero fluff)."
+  },
+  "brand_assets": {
+    "nss_logo": "https://customer-assets-cm19k8pv.emergentagent.net/job_5085535f-5dce-4e3f-bd8e-237307d9e564/artifacts/ootad4l1_National_Service_Scheme_logo.svg.webp",
+    "nmamit_logo": "https://customer-assets-cm19k8pv.emergentagent.net/job_5085535f-5dce-4e3f-bd8e-237307d9e564/artifacts/hdtmqb2l_nitte-nmamit-logo.png",
+    "header_order_rule": "MANDATORY: User strictly specified: 'keep NSS logo first and beside that keep NMAMIT logo'. The header branding must display the circular NSS logo on the left, followed immediately by the NMAMIT / Nitte logo on the right, accompanied by clear typography 'NSS UNIT - NMAMIT' and subline 'Nitte (Deemed to be University)'."
+  },
+  "typography": {
+    "font_family_heading": "Cabinet Grotesk, Outfit, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "font_family_body": "IBM Plex Sans, Inter, -apple-system, sans-serif",
+    "font_family_mono": "'JetBrains Mono', 'Source Code Pro', monospace",
+    "rules": {
+      "headings": "font-bold tracking-tight text-slate-900 dark:text-slate-100",
+      "eyebrow_labels": "text-xs font-semibold tracking-[0.2em] uppercase text-red-600 dark:text-red-400",
+      "h1_hero_ceiling": "text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold",
+      "h3_subsection": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-slate-600 dark:text-slate-300",
+      "no_banned_defaults_for_headers": "Do NOT use plain generic sans without tracking or bold character. Avoid generic AI slop."
+    }
+  },
+  "colors": {
+    "nss_crimson": {
+      "main": "#DC2626",
+      "hover": "#B91C1C",
+      "light": "#FEF2F2",
+      "border": "#FCA5A5"
+    },
+    "nss_deep_blue": {
+      "main": "#1E3A8A",
+      "hover": "#172554",
+      "light": "#EFF6FF",
+      "navy_bg": "#0B1528"
+    },
+    "nitte_indigo": {
+      "main": "#1D4ED8",
+      "accent": "#4338CA"
+    },
+    "gold_seal": {
+      "main": "#D97706",
+      "light": "#FEF3C7"
+    },
+    "status_colors": {
+      "upcoming": "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800",
+      "live": "bg-emerald-50 text-emerald-700 border-emerald-200 animate-pulse dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800",
+      "completed": "bg-slate-100 text-slate-700 border-slate-300 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700",
+      "cancelled": "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800",
+      "full": "bg-amber-50 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800"
+    }
+  },
+  "image_urls": {
+    "events": [
+      {
+        "category": "blood_donation",
+        "url": "https://images.unsplash.com/photo-1615461066159-fea0960485d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxibG9vZCUyMGRvbmF0aW9ufGVufDB8fHx8MTc4ODg5MTQ0N3ww&ixlib=rb-4.1.0&q=85",
+        "title": "Mega Blood Donation Camp & Health Screening",
+        "description": "Healthcare worker drawing blood at annual NMAMIT Red Cross & NSS donation camp"
+      },
+      {
+        "category": "blood_bank",
+        "url": "https://images.unsplash.com/photo-1683791895200-201c0c40310f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxibG9vZCUyMGRvbmF0aW9ufGVufDB8fHx8MTc4ODg5MTQ0OHww&ixlib=rb-4.1.0&q=85",
+        "title": "Clinical Blood Collection Unit",
+        "description": "Donation units collected for K.S. Hegde Charitable Hospital Deralakatte"
+      },
+      {
+        "category": "community_outreach",
+        "url": "https://images.unsplash.com/photo-1628717341663-0007b0ee2597?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJpbmclMjBjb21tdW5pdHl8ZW58MHx8fHwxNzg4ODkxNDQ4fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Gram Swachhata & Village Supply Drive",
+        "description": "Volunteers distributing essential rations and sanitization kits in Nitte Panchayat"
+      },
+      {
+        "category": "food_relief",
+        "url": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHx2b2x1bnRlZXJpbmclMjBjb21tdW5pdHl8ZW58MHx8fHwxNzg4ODkxNDQ4fDA&ixlib=rb-4.1.0&q=85",
+        "title": "NSS Community Kitchen & Food Relief",
+        "description": "Volunteers packaging emergency nutrition packets during Monsoon alert"
+      },
+      {
+        "category": "youth_orientation",
+        "url": "https://images.unsplash.com/photo-1545886082-e66c6b9e011a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHw0fHx5b3V0aCUyMHRlYW0lMjB3b3Jrc2hvcCUyMHNlbWluYXJ8ZW58MHx8fHwxNzg4ODkxNDQzfDA&ixlib=rb-4.1.0&q=85",
+        "title": "Youth Leadership Conclave & Induction",
+        "description": "Volunteers posing with awareness banners at annual NSS orientation meet"
+      },
+      {
+        "category": "seminar_workshop",
+        "url": "https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHx5b3V0aCUyMHRlYW0lMjB3b3Jrc2hvcCUyMHNlbWluYXJ8ZW58MHx8fHwxNzg4ODkxNDQzfDA&ixlib=rb-4.1.0&q=85",
+        "title": "Social Innovation & Rural Tech Seminar",
+        "description": "Interactive keynote session on technological empowerment in agriculture"
+      }
+    ]
+  },
+  "layout_and_navigation": {
+    "public_navigation": {
+      "header_style": "sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm",
+      "desktop_links": [
+        { "name": "Home", "path": "/" },
+        { "name": "Events", "path": "/events" },
+        { "name": "Gallery", "path": "/gallery" },
+        { "name": "Team", "path": "/team" },
+        { "name": "Verify Certificate", "path": "/verify" }
+      ],
+      "actions": [
+        { "name": "Member Login", "path": "/login", "variant": "outline" },
+        { "name": "Join NSS", "path": "/events", "variant": "primary" }
+      ]
+    },
+    "admin_navigation": {
+      "layout_type": "left-sidebar fixed/sticky with top quick-bar",
+      "sidebar_classes": "w-64 bg-slate-950 text-slate-200 min-h-screen border-r border-slate-800 p-4 flex flex-col justify-between",
+      "items": [
+        { "name": "Dashboard / KPI", "icon": "LayoutDashboard", "path": "/admin" },
+        { "name": "Members", "icon": "Users", "path": "/admin/members" },
+        { "name": "Events", "icon": "Calendar", "path": "/admin/events" },
+        { "name": "Gallery", "icon": "Image", "path": "/admin/gallery" },
+        { "name": "Certificates", "icon": "Award", "path": "/admin/certificates" },
+        { "name": "Attendance", "icon": "CheckSquare", "path": "/admin/attendance" },
+        { "name": "Accounts Ledger", "icon": "Receipt", "path": "/admin/accounts" },
+        { "name": "Super Admin Roles", "icon": "ShieldCheck", "path": "/admin/roles", "super_admin_only": true }
+      ]
+    },
+    "footer": {
+      "address": "NMAM Institute of Technology Nitte, SH1, Karkala, Karnataka, 574110",
+      "contact": {
+        "phone": "+91 8258 281263 / +91 8258 281264",
+        "email": "nss@nmamit.in",
+        "hours": "Mon - Sat: 9:00 AM - 5:00 PM"
+      },
+      "socials": [
+        { "name": "LinkedIn", "href": "https://www.linkedin.com/school/nitte-nmamit/" },
+        { "name": "Instagram", "href": "https://www.instagram.com/nss_nmamit/" },
+        { "name": "Call", "href": "tel:+918258281263" },
+        { "name": "Email", "href": "mailto:nss@nmamit.in" }
+      ]
+    }
+  },
+  "key_features_design_specs": {
+    "event_card": {
+      "pattern": "High visual hierarchy card with status badge, date badge, capacity bar, Razorpay fee chip (Free / ₹XX), location, and quick registration button.",
+      "states": ["upcoming", "live", "completed", "cancelled", "full"],
+      "registration_modal": "Includes volunteer details, emergency contact, Terms & Conditions checkbox, Razorpay mock checkout trigger, and instant downloadable invoice simulation."
+    },
+    "member_portal": {
+      "views": [
+        "Personal details & USN badge (e.g. 4NM22CS089)",
+        "Registered events with admission pass QR",
+        "Attendance ledger with calculated service hours (NSS 120 hr requirement tracker)",
+        "Issued certificates with preview & download",
+        "Payment invoices with PDF download simulation",
+        "Social profile links & volunteer badge level"
+      ]
+    },
+    "gallery_system": {
+      "filters": ["All", "Blood Donation", "Swachh Bharat", "Annual Special Camp", "Health Camp", "Workshops"],
+      "year_filters": ["2026", "2025", "2024", "2023"],
+      "photo_frame_feature": "Interactive Photo Frame generator allowing volunteers to preview their event memory in an official 'NSS NMAMIT Volunteer' commemorative frame with date stamp and download button.",
+      "slideshow_lightbox": "Smooth modal slideshow with keyboard navigation and drive links."
+    },
+    "accounts_ledger": {
+      "pattern": "Full financial ledger recording event registration fees, donations, equipment expenses, refreshments, certificate printing costs, and balance summary.",
+      "stats": ["Total Inflow", "Total Outflow", "Current Fund Balance", "Pending Reimbursements"]
+    },
+    "certificate_verification": {
+      "route": "/certificate/:number",
+      "public_route_verify": "/verify",
+      "features": "Direct search by certificate number (e.g. NSS-NMAMIT-2025-0842), displaying student USN, event name, issue date, verified signature seal, and tamper-proof stamp."
+    }
+  },
+  "universal_guidelines_for_main_agent": [
+    "Always maintain NSS logo FIRST and NMAMIT logo BESIDE IT in header, hero, footer, and certificates as explicitly instructed.",
+    "Do NOT use pure black #000000 or sterile generic grays; use slate/zinc tinted neutrals.",
+    "Header must have solid or heavy backdrop-blur background (bg-white/95 or bg-slate-900/95); NEVER transparent over text.",
+    "Every interactive button, input, tab, modal, and link MUST include role-based data-testid attributes (e.g., data-testid='event-card-register-btn', data-testid='member-login-submit').",
+    "Include pre-seeded sample data for all 3 experiences (Public visitors, Student Volunteer, Admin Officer, Super Admin) with a 1-click 'Demo Account Switcher' or test credentials banner for effortless evaluation.",
+    "Provide responsive drawer / mobile navigation for mobile screens, keeping desktop navbar clear and expansive.",
+    "Use Sonner for toasts (registration confirmation, invoice download, certificate verification, admin CRUD).",
+    "All components should be standard React .js or .jsx as configured in package.json."
+  ]
+}

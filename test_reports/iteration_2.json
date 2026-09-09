@@ -1,0 +1,42 @@
+{
+  "summary": "Iteration 2 testing: 27/27 backend pytest passing (100%) including new features - Site Content GET/PUT, Team CRUD, Attendance QR scan (manual code path with success/duplicate/404/400 branches), Admin designation field, module-limited admin 403s, seeded HERO_PHOTOS carousel, only 2 seeded super_admins (pravith@gmail.com + admin@renenture.com), demo data removed. Regression retained: auth (email+USN+wrong pw), access control, events CRUD, member registration+duplicate 409, certificates upload+issue+public verify+delete-invalidates, gallery CRUD, accounts+summary, super-admin lifecycle+cannot-delete-self, files, audit logs, payments/config unconfigured. Fixed 1 backend bug during testing (register_event crashed with 500 when event.event_date is None due to `event.get('event_date','')[:10]` on a None value from a document that HAS the key set to None). Frontend smoke: Home renders with hero carousel (hero-dot-0 clickable), theme-toggle switches classes and persists in localStorage as 'nss_theme', no 'Join NSS' button, no stat counters, header shows NSS logo + NITTE logo without 'NSS UNIT' text. Photo Frame /photo-frame: upload+3 frame options (frame-crimson/navy/gold)+Download disabled until upload. Admin logged in (pravith), Site Content page loads with theme-light/theme-dark toggles + carousel-add + banner uploads; Team page team-add-btn+team-form-name+team-form-role+team-form-submit adds visible entry; Super Admin add-admin modal exposes admin-form-designation with all required options (Programme Officer, Faculty Coordinator, NSS Secretary, Core Member, Teacher, Student Volunteer); Attendance page shows Scan Pass button (attendance-scan-btn). Manual QR path validated end-to-end via backend test (registration id -> present).",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "POST /api/events/{id}/register", "issue": "Crashed 500 when event stored with event_date=None because `event.get('event_date','')[:10]` slices None. Fixed to `(event.get('event_date') or '')[:10]`. Should be applied consistently anywhere date/optional-strings are sliced."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Audit other `event.get('event_date','')[:10]` / similar `.get(k,'')[:10]` patterns in api.py - dict.get returns None (not the default) when the key exists with a None value. Same shape may exist elsewhere and blow up in production.",
+    "Consider stricter validation: /admin/site-content PUT accepts theme values as free strings; add enum validation for 'light'|'dark'.",
+    "Order field in team is used for sort but PATCH TeamIn requires all fields including order/category - accepting partial updates would be friendlier."
+  ],
+  "critical_code_review_comments": [
+    "cleanup_and_seed_site() wipes users with role in ['member','user'] on FIRST run only (guarded by absence of site_settings). This one-time destructive migration is correct-but-scary; if the site_settings doc is ever manually deleted, all members/registrations will be wiped again. Consider a dedicated `migrations` collection flag instead.",
+    "server.py still contains the old seed_content() function - dead code that is never called. Remove to prevent accidental re-invocation.",
+    "core.py get_current_user still reads cookie 'access_token' but login sets no cookie (dead code path from iteration 1 - carried forward).",
+    "api.py `_reg_status` for compulsory events returns status 'compulsory' with can_register=False; frontend admission-pass rendering assumes a my_registration exists which is never created for compulsory events - QR scan will not work for compulsory events. This may be by design (no reg needed), but confirm.",
+    "SiteContentIn allows theme any string (no enum) and admin/site-content PUT does not validate URLs in home_carousel - a malicious/typo'd string would break the hero.",
+    "TeamIn PATCH endpoint uses full model - partial updates require sending name/role again."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py",
+    "/app/backend/api.py"
+  ],
+  "success_rate": {"backend": "100% (27/27)", "frontend": "100% smoke + interaction"},
+  "test_credentials": "pravith@gmail.com/12345678 (super_admin); admin@renenture.com/Owner@NSS2026 (super_admin); test members are created per-run with USN as password.",
+  "seed_data_creation": "Tests create TEST_ prefixed member+admins+events+team+gallery+cert; UI test created TEST UI Team. All cleaned up.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Demo data intentionally absent - do NOT assume seeded events/team/members exist. Create your own via /api/admin/members + /api/admin/events fixtures. Only 2 super_admins seeded. HERO_PHOTOS list in server.py is seeded into site_settings.home_carousel on first startup. If site_settings doc exists, cleanup_and_seed_site is a no-op. Manual attendance QR path hits /api/admin/attendance/scan with {code: registration_id, event_id}. Camera scan won't run headless. Backend bug in register_event was fixed during this iteration.",
+  "rca of the issue": "TypeError on event registration: `dict.get(key, default)` returns the default ONLY when the key is missing. If key exists and is None, it returns None. `event.get('event_date','')[:10]` therefore raised TypeError on any event created via /admin/events without event_date (which is Optional). Fix: `(event.get('event_date') or '')[:10]`. Same idiom may exist in other f-strings in api.py."
+}
