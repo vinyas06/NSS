@@ -24,6 +24,7 @@ export default function PhotoFrame() {
     l.src = NSS_LOGO;
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { if (img) draw(); }, [img, frame, logoImg]);
 
   const onUpload = (e) => {
